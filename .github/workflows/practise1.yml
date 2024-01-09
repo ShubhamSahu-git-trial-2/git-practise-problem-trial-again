@@ -13,6 +13,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run lint
-        run: npm run lint
+        run: |
+          npm run lint
+          npm run test
+          npm run build
       - name: echo message
-        run: echo "Lint ran"
+        run: echo "all ran"
